@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给轲轲的留言板</title>
+    <style>
+        body {
+            font-family: "微软雅黑", sans-serif;
+            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        .message-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #34495e;
+            font-weight: 500;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 2px rgba(52,152,219,0.1);
+        }
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .back-link:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <h1>📝 给轲轲的留言板</h1>
+        <p style="color: black;">写下你想对轲轲说的话吧～</p>
+    </header>
+
+    <form class="message-form">
+        <div class="form-group">
+            <label for="nickname">你的昵称</label>
+            <input type="text" id="nickname" placeholder="请输入你的昵称" required>
+        </div>
+        <div class="form-group">
+            <label for="message">留言内容</label>
+            <textarea id="message" placeholder="分享你的想法、祝福或建议..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">发送留言 ✨</button>
+        <a href="javascript:history.back()" class="back-link">← 返回留言列表</a>
+    </form>
+
+    <script>
+        // 提交表单时的处理（示例：仅前端提示，实际需后端配合）
+        document.querySelector('.message-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // 阻止表单默认提交
+            const nickname = document.getElementById('nickname').value;
+            const message = document.getElementById('message').value;
+            
+            // 模拟提交成功提示
+            alert(`感谢 ${nickname} 的留言！你的话已成功发送～`);
+            // 提交后可跳回留言列表页
+            window.location.href = '留言列表页的URL'; // 需替换为实际列表页地址
+        });
+    </script>
+</body>
+</html>

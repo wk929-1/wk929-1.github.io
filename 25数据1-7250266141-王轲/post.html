@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发布新帖子 | 王轲的个人博客</title>
+    <style>
+        /* 基础重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }
+
+        /* 页面背景（与之前风格统一） */
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e5e6 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        /* 头部标题 */
+        header {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        /* 主内容区（表单容器） */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 发布表单卡片 */
+        .post-form-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid #3498db;
+        }
+
+        /* 表单分组 */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* 标签样式 */
+        .form-label {
+            display: block;
+            font-size: 1rem;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        /* 输入框/文本域样式 */
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #34495e;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52,152,219,0.1);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical; /* 允许垂直拉伸 */
+            line-height: 1.6;
+        }
+
+        /* 发布按钮 */
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+
+        /* 返回按钮（与之前风格统一） */
+        .back-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background: goldenrod;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-decoration: none; /* 若用<a>标签则需加 */
+        }
+
+        .back-btn:hover {
+            background: #e6b800;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="page-title">发布新帖子</h1>
+    </header>
+
+    <main>
+        <div class="post-form-card">
+            <form id="postForm">
+                <div class="form-group">
+                    <label class="form-label" for="postTitle">帖子标题</label>
+                    <input type="text" id="postTitle" class="form-input" placeholder="输入标题（如：今天的学习感悟）" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="postContent">帖子内容</label>
+                    <textarea id="postContent" class="form-textarea" placeholder="分享你的想法..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">发布帖子</button>
+            </form>
+        </div>
+    </main>
+
+    <footer style="text-align: center; margin-top: 40px; font-size: 0.85rem; color: #95a5a6;">
+        <p>© 2025 王轲的个人博客 | 江苏师范大学科文学院 Web大作业</p>
+    </footer>
+
+    <script>
+        // 表单提交逻辑（示例：仅提示成功，实际需结合后端）
+        document.getElementById('postForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // 阻止默认提交
+            alert('帖子发布成功！（实际需后端接口处理数据）');
+            // 发布成功后跳回帖子列表页
+            window.location.href = 'posts.html'; // 替换为你的帖子列表页文件名
+        });
+    </script>
+</body>
+</html>

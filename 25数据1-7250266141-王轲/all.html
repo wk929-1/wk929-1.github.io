@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>目录</title>
+    <style>
+    .text-center {
+      text-align: center;
+      font-size: 80px;
+      color: black;
+      font-family:"微软雅黑";
+    }
+    .all-form {
+      margin-bottom: 20px; /* 增加表单之间的间距 */
+    }
+    button {
+      padding: 10px 20px;
+      background-color: lightgreen;
+      color: white;
+      border: none;   /*无边框线*/
+      cursor: pointer; /*手型*/
+      border-radius: 5px; /*设置元素圆角*/
+      transition: background-color 0.3s ease; /* 添加鼠标悬停过渡效果 */
+      font-size: 45px; /*设置文字大小*/
+    }
+    button:hover {
+      background-color: burlywood;
+    }
+    .bg-box {
+            width: 2000px;
+            height: 1000px;
+            background-image: url("muluyemian.jpg");
+            background-size: cover; /*控制背景图片尺寸*/
+            background-position: center;
+            padding: 30px; /*内边距*/
+            font-size: 20px;
+    }
+    </style>
+</head>
+<body>
+  <div class="bg-box">
+      <p class="text-center">目录</p>
+    <form class="all-form"action="index.html" method="post">
+        <button type="submit">一、个人页面</button>
+    </form>
+    <form class="all-form"action="publish.html" method="post">
+        <button type="submit">二、发帖页面</button>
+    </form>
+    <form class="all-form"action="comments.html" method="post">
+        <button type="submit">三、留言板页面</button>
+    </form>
+        <br>
+    </div>
+</body>
+</html>

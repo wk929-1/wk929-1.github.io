@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人页面</title>
+    <style>
+        /* 基础重置 */
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6; /*行高*/
+            padding: 2rem 1rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .page-title {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-desc {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* 主体卡片（语义化+阴影） */
+        .profile-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        /* 头像区域（语义化figure标签） */
+        .avatar-wrapper {
+            flex: 1 1 250px; /* 最小宽度250px */
+            padding: 2rem;
+            background-color: #f0f7ff; /* 淡蓝背景突出头像 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .avatar-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover; /* 防止图片拉伸 */
+            border: 5px solid #fff;
+            box-shadow: 0 0 15px rgba(0,123,255,0.2);
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .avatar-img:hover {
+            transform: scale(1.05); /* 鼠标悬浮放大 */
+        }
+
+        .avatar-name {
+            font-size: 1.3rem;
+            font-weight: bold; /*加粗显示*/
+            color: #007bff;
+        }
+
+        /* 信息区域（语义化section标签） */
+        .info-section {
+            flex: 3 1 400px; /* 占比更大，最小宽度400px */
+            padding: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            color: #007bff;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-list li::before {
+            content: "•";
+            color: #007bff;
+            margin-right: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .quote {
+            font-style: italic;
+            color: green;
+            font-size: 15px;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-left: 4px solid #007bff;
+            margin: 1.5rem 0;
+        }
+
+        /* 按钮优化 */
+        .back-btn {
+            padding: 0.8rem 2rem;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <h1 class="page-title">我的小小博客</h1>
+        <p class="page-desc">记录成长，分享热爱</p>
+    </header>
+    <main class="profile-card">
+        <div class="profile-container">
+            <figure class="avatar-wrapper">
+                <img src="touxiang.jpg" alt="王轲的头像" class="avatar-img">
+                <figcaption class="avatar-name">王轲 (wangke)</figcaption>
+            </figure>
+            <section class="info-section">
+                <h2 class="section-title">基本信息</h2>
+                <ul class="info-list">
+                    <li>性别：女</li>
+                    <li>年龄：19岁</li>
+                    <li>个人爱好：书法、运动</li>
+                </ul>
+                <blockquote class="quote">
+                    座右铭：悟已往之不见，知来者之可追
+                </blockquote>
+                <button onclick="history.back()" style="padding: 8px 16px; background: goldenrod; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                返回上一页
+                </button>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发帖页面</title>
+    <style>
+     /* 基础重置：消除浏览器默认样式差异 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "微软雅黑";
+    }
+
+    /* 页面背景：柔和渐变提升质感 */
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e5e6 100%);
+      min-height: 100vh;
+      padding: 20px 0;
+    }
+
+    /* 页面头部：居中+固定宽度 */
+    header {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+
+    /* 主标题：突出且不刺眼 */
+    .page-title {
+      font-size: clamp(2rem, 5vw, 3rem); /* 响应式字体大小 */
+      color: #2c3e50;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* 主内容区：卡片容器 */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      gap: 20px; /* 卡片间距 */
+    }
+
+    /* 帖子卡片 */
+    .post-card {
+      background: white;
+      border-radius: 12px; /* 圆角更柔和 */
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 自然阴影 */
+      transition: all 0.3s ease; /* 动画过渡 */
+      border-left: 4px solid #3498db;
+    }
+
+    /* 悬停动效：增强交互感 */
+    .post-card:hover {
+      transform: translateY(-5px); /* 轻微上浮 */
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* 阴影放大 */
+    }
+
+    /* 日期标签 */
+    .post-date {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* 日期图标 */
+    .post-date::before {
+      content: "📅"; /* 日历图标代替纯文本 */
+    }
+
+    /* 帖子内容 */
+    .post-content {
+      font-size: 1rem;
+      line-height: 1.6; /* 行高提升可读性 */
+      color: #34495e;
+    }
+
+    .post-actions {
+      margin-top: 15px;
+      display: flex;
+      gap: 15px;
+      padding-top: 10px;
+      border-top: 1px solid #f1f1f1;
+    }
+
+    /* 按钮样式：扁平化+微交互 */
+    .action-btn {
+      border: none;
+      background: none;
+      color: #7f8c8d;
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.2s;
+    }
+
+    .action-btn:hover {
+      color: #3498db; /*  hover时变主题色 */
+    }
+
+    /* 页脚：版权信息 */
+    footer {
+      max-width: 800px;
+      margin: 40px auto 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #95a5a6;
+    }
+  </style>
+  </style>
+</head>
+<body>
+    <header>
+    <h1 class="page-title">发布过的贴子</h1>
+  </header>
+  <main>
+    <article class="post-card">
+      <time class="post-date" datetime="2025-01-01">2025.01.01</time>
+      <p class="post-content">今天是2025年的第一天，愿我能元气满满地面对高考！</p>
+      <div class="post-actions">
+        <button class="action-btn">👍 点赞 (12)</button>
+        <button class="action-btn">💬 评论 (3)</button>
+      </div>
+    </article>
+    <article class="post-card">
+      <time class="post-date" datetime="2025-06-06">2025.06.06</time>
+      <p class="post-content">明天就是高考了，加油，你是最棒的！</p>
+      <div class="post-actions">
+        <button class="action-btn">👍 点赞 (25)</button>
+        <button class="action-btn">💬 评论 (8)</button>
+      </div>
+    </article>
+    <article class="post-card">
+      <time class="post-date" datetime="2025-06-09">2025.06.09</time>
+      <p class="post-content">高考终于考完了，接下来的暑假好好放松吧！Relax!</p>
+      <div class="post-actions">
+        <button class="action-btn">👍 点赞 (18)</button>
+        <button class="action-btn">💬 评论 (5)</button>
+      </div>
+    </article>
+    <article class="post-card">
+      <time class="post-date" datetime="2025-09-12">2025.09.12</time>
+      <p class="post-content">明天就要去江苏师范大学科文学院上学了，有点小期待！</p>
+      <div class="post-actions">
+        <button class="action-btn">👍 点赞 (32)</button>
+        <button class="action-btn">💬 评论 (10)</button>
+      </div>
+    </article>
+    <article class="post-card">
+      <time class="post-date" datetime="2025-12-22">2025.12.22</time>
+      <p class="post-content">今天在完善我的web大作业，希望努力终有回报，获得一个好成绩！</p>
+      <div class="post-actions">
+        <button class="action-btn">👍 点赞 (21)</button>
+        <button class="action-btn">💬 评论 (7)</button>
+      </div>
+    </article>
+  </main>
+  <div style="text-align: center; margin-top: 2rem; font-size: 1rem; color: #3498db; cursor: pointer;"onclick="window.location.href='post.html'">
+      ✨ 点击下方区域，去发布帖子吧！ ✨
+    </div>
+  <footer>
+    <p>© 2025 发布的贴子 | 江苏师范大学科文学院 Web大作业</p>
+  </footer>
+  <button onclick="history.back()" style="padding: 8px 16px; background: goldenrod; color: white; border: none; border-radius: 4px; cursor: pointer;">
+    返回上一页
+  </button>
+</body>
+</html>
